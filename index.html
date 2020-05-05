@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <title>Mac WiFi Test</title>
+</head>
+
+<body>
+  <div class="ml-4 fixed-bottom d-none d-sm-block">
+    <span style="font-size: 1em;" id="twitter-icon">
+      <a href="http://twitter.com/raidzklart" target="blank">
+        <i class="fab fa-twitter-square grey"></i>
+      </a>
+    </span>
+    <a href="http://twitter.com/raidzklart" class="text-reset" target="blank">
+      Feedback?
+    </a>
+  </div>
+  <div class="h-100 align-items-center d-flex flex-column
+     bg-gradient">
+    <div class="containter col align-items-center text-center mt-2 pt-4">
+      <h1 class="grey mt-4 pt-4 display-3 css-fade-in">Mac WiFi Test</h1>
+      <p class="grey h4 css-fade-in">Test your internet speed, straight from your Mac's menu bar.</p>
+      <div class="container css-fade-in w-60 mt-2 pt-4">
+        <p class="grey">
+          Not sure if your internet speed will be fast enough for that video call? Youtube videos not loading? <br>
+          Check your internet speed quickly and easily straight from your menu bar.
+        </p>
+      </div>
+      <div class="row d-flex flex-column mt-4 pt-4">
+        <div class="col">
+          <!-- <button type="button" class="btn btn-primary btn-lg">Buy now for $4.99</button> -->
+          <a class="gumroad-button" href="https://gum.co/eJcaQ?wanted=true" target="_blank">Buy now for $4.99</a>
+        </div>
+        <div class="col">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-primary mt-4 css-fade-in" data-toggle="modal"
+            data-target="#exampleModalCenter">
+            See the demo
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="embed-responsive embed-responsive-1by1">
+                    <video id="demo-video" controls>
+                      <source src="Screen.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col align-items-center text-center mt-4">
+          <div class="container mt-2 pt-2">
+            <img class="img-fluid imac" src="MacDesktop.png" alt="iMac">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://gumroad.com/js/gumroad.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <script>
+    $(function () {
+      var video = $('#demo-video').get(0);
+      $('#exampleModalCenter').on("shown.bs.modal", function () {
+        video.play();
+      });
+      $('#exampleModalCenter').on("hidden.bs.modal", function () {
+        video.pause();
+        video.currentTime = 0;
+        console.log("Video has been stopped");
+      });
+    });
+  </script>
+</body>
+
+</html>
